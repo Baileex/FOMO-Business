@@ -34,7 +34,7 @@
 }
 
 .LoginFormButton {
-  /* text-align: center;
+  text-align: center;
   margin-top: 0%;
   margin-left: 0%;
   margin-bottom: 5%;
@@ -48,6 +48,6 @@
   color: white;
   text-transform: uppercase;
   font-size: 70%;
-  opacity: 80%; */
+  /* opacity: 80%; */
   /* background-color: orange; */
 }
