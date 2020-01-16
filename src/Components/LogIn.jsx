@@ -2,6 +2,7 @@ import React from "react";
 import * as api from "./Api";
 import { navigate } from "@reach/router";
 import ErrorDisplay from "./ErrorDisplay";
+import "./Login.css";
 
 export default class LogIn extends React.Component {
   state = {
@@ -54,44 +55,40 @@ export default class LogIn extends React.Component {
 
   render() {
     const { password, username, err, access_token } = this.state;
-    let className = "logInContainer";
-    if (access_token.length > 0) {
-      className = "disable-login";
-    }
     return (
-      <div className="container">
-        <div className={className}>
-          <form className="regForm" onSubmit={this.handleSubmit}>
-            <h2 className="regFormTitle">FOMO</h2>
-            <input
-              type="text"
-              placeholder="Username"
-              className="regInput"
-              required
-              onChange={this.handleChange}
-              name="username"
-              value={username}
-            />
-            <br />
-            <input
-              type="password"
-              placeholder="Password"
-              className="regInput"
-              onChange={this.handleChange}
-              name="password"
-              value={password}
-              required
-            />
-            <br />
-            {err && <ErrorDisplay error={err} />}
-            <br />
-            <p className="regForget">Forgot your password?</p>
-            <button type="submit" className="regButton">
-              Sign In
-            </button>
-          </form>
-        </div>
+      // <div className="LoginContainerOuter">
+      <div className="LoginContainer">
+        <form className="LoginForm" onSubmit={this.handleSubmit}>
+          <h2 className="LoginFormTitle">FOMO</h2>
+          <input
+            className="LoginFormInput"
+            type="text"
+            placeholder="Username"
+            required
+            onChange={this.handleChange}
+            name="username"
+            value={username}
+          />
+          {/* <br /> */}
+          <input
+            className="LoginFormInput"
+            type="password"
+            placeholder="Password"
+            onChange={this.handleChange}
+            name="password"
+            value={password}
+            required
+          />
+          {/* <br /> */}
+          {err && <ErrorDisplay error={err} />}
+          {/* <br /> */}
+          <p className="LoginFormForgot">Forgot your password?</p>
+          <button type="submit" className="LoginFormButton">
+            Sign In
+          </button>
+        </form>
       </div>
+      // </div>
     );
   }
 }

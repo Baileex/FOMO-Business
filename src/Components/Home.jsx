@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
+import "./Home.css";
 
-const Home = ({getUser}) => {
+const Home = ({ getUser }) => {
   return (
-    <div>
-      <h1>Homepage</h1>
-      <LogIn getUser={getUser}/>
-      <SignUp />
+    <div className="HomepageContainer">
+      <div className="LogoContainer"></div>
+      <div className="HomepageFormContainer">
+        <LogIn getUser={getUser} />
+        <SignUp />
+      </div>
     </div>
   );
 };
