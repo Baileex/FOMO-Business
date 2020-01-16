@@ -33,8 +33,8 @@ export default class LogIn extends React.Component {
         getUser(
           response.access_token,
           response.details.username,
-          response.details.business_id,
-          response.details.business_name
+          response.details.business_name,
+          response.details.business_id
         );
         this.setState({
           username: response.details.username,
