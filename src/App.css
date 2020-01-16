@@ -105,7 +105,7 @@ body {
   margin: 0;
   transition: 0.2s ease-in-out;
   visibility: visible;
-  background-color: rgba(180, 177, 177, 0.342) 
+  background-color: rgba(180, 177, 177, 0.99) 
   
 }
 
@@ -153,12 +153,6 @@ body {
 visibility: hidden; 
 }
 
-.signUpContainer {
-  visibility: visible;
-  background-color: aqua;
-  position: fixed;
-  margin: 5% 20%;
-}
 
 .regForm {
   /* background-color: aqua; */
@@ -250,11 +244,11 @@ visibility: hidden;
   text-align: center;
   border-radius: 20px;
   margin-top: 1%;
-  margin-left: 41%;
+  margin-left: 31%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  width: 40%;
+  width: 60%;
 }
 
 .citybInput {
@@ -276,11 +270,11 @@ visibility: hidden;
   text-align: center;
   border-radius: 20px;
   margin-top: 1%;
-  margin-left: 41%;
+  margin-left: 31%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  width: 40%;
+  width: 60%;
 }
 
 .citycInput {
@@ -303,12 +297,12 @@ visibility: hidden;
   text-align: center;
   border-radius: 20px;
   margin-top: 1%;
-  margin-left: 41%;
+  margin-left: 31%;
   margin-bottom: 2%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  width: 40%;
+  width: 60%;
 }
 
 br {
@@ -346,9 +340,9 @@ br {
   background: white;
   text-align: center;
   border-radius: 20px;
-  margin-top: 1%;
-  margin-left: 17%;
-  width: 80%;
+  margin-top: -2%;
+  margin-left: 31%;
+  width: 60%;
   height: 200%;
   font-weight: 100;
   font-size: 100%;
@@ -419,17 +413,44 @@ br {
   width: 40%;
 }
 
+.passInput{
+  border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 0%;
+  margin-left: 6%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+.pass2Input{
+  border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 1%;
+  margin-left: 23.5%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+
 .baddInput{
   border: none;
   background: white;
   text-align: center;
   border-radius: 20px;
   margin-top: 0%;
-  margin-left: 18%;
+  margin-left: 8%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  width: 40%;
+  width: 60%;
 }
 
 .typeInput {
@@ -453,11 +474,11 @@ br {
   border-radius: 20px;
   margin-top: -50%;
   margin-bottom: 5%;
-  margin-left: 41%;
+  margin-left: 31%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  width: 40%;
+  width: 60%;
 }
 select {
 text-align: center; 
@@ -475,14 +496,56 @@ text-align: center;
   opacity: 80%;
 }
 
+.pass-regButton {
+  background: rgba(196, 73, 7, 1);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 0%;
+  margin-bottom: 10%;
+  margin-left: 25%;
+  text-transform: uppercase;
+  font-size: 70%;
+  opacity: 80%;
+}
+
 .details-regButton {
   background: rgba(196, 73, 7, 1);
   border-radius: 20px;
   border: none;
   color: white;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-bottom: 10%;
-  margin-left: 25%;
+  margin-left: 40%;
+  width: 20%;
+  text-transform: uppercase;
+  font-size: 70%;
+  opacity: 80%;
+}
+
+.username-regButton {
+  background: rgba(196, 73, 7, 1);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 1%;
+  margin-bottom: 10%;
+  margin-left: 35%;
+  width: 20%;
+  text-transform: uppercase;
+  font-size: 70%;
+  opacity: 80%;
+}
+
+.pass-regButton {
+  background: rgba(196, 73, 7, 1);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 1%;
+  margin-bottom: 10%;
+  margin-left: 35%;
+  width: 20%;
   text-transform: uppercase;
   font-size: 70%;
   opacity: 80%;
@@ -519,6 +582,19 @@ text-align: center;
   height: 85%;
   margin-top: 5%;
   margin-left: 2%;  
+  text-align: left;
+  grid-area: form;
+}
+
+.bus-form {
+  visibility: visible;
+  background-color:rgba(180, 177, 177, 0.342) ;
+  position: fixed; 
+  border-radius: 20px;
+  width: 50%;
+  height: 75%;
+  margin-top: 5%;
+  margin-left: 25%;  
   text-align: left;
   grid-area: form;
 }

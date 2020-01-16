@@ -67,7 +67,7 @@ export default class BusinessPage extends React.Component {
       err
     } = this.state;
     return (
-      <div className="events-form">
+      <div className="bus-form">
         <h1 className="postevent-title">CHANGE DETAILS</h1>
         <form onSubmit={this.handleUsernameChange}>
           <label className="address">
@@ -82,7 +82,7 @@ export default class BusinessPage extends React.Component {
               className="nameInput"
             />
           </label>
-          <button type="submit" className="event-regButton">
+          <button type="submit" className="username-regButton">
             Change Username
           </button>
         </form>
@@ -98,7 +98,7 @@ export default class BusinessPage extends React.Component {
               value={passwordOne}
               onChange={this.handleChange}
               required
-              className="addInput"
+              className="passInput"
             />
           </label>
           <input
@@ -108,10 +108,10 @@ export default class BusinessPage extends React.Component {
             value={passwordTwo}
             onChange={this.handleChange}
             required
-            className="addInput"
+            className="pass2Input"
           />
           {err && <ErrorDisplay error={err} />}
-          <button type="submit" className="event-regButton">
+          <button type="submit" className="pass-regButton">
             Change Password
           </button>
         </form>
