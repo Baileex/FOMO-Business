@@ -66,7 +66,8 @@ export default class LogIn extends React.Component {
           description: "",
           err: null
         });
-        navigate("/events");
+        alert("Sign up successful, please log in!")
+        navigate("/");
       })
       .catch(response =>
         this.setState({ err: { msg: "You did something wrong! :(" } })
@@ -93,6 +94,8 @@ export default class LogIn extends React.Component {
 
         <form className="regForm" onSubmit={this.handleSubmit}>
           <div>
+            <label className="address">
+              Username:
             <input
               className="regFormInput"
               type="text"
@@ -101,7 +104,9 @@ export default class LogIn extends React.Component {
               value={username}
               onChange={this.handleChange}
               required
-            />
+            /></label>
+            <label className="address">
+            <div></div>Password:
             <input
               className="regFormInput"
               type="password"
@@ -110,7 +115,9 @@ export default class LogIn extends React.Component {
               value={password}
               onChange={this.handleChange}
               required
-            />
+            /></label>
+            <label className="address">
+              <div></div>Business Name:
             <input
               className="regFormInput"
               type="text"
@@ -119,8 +126,10 @@ export default class LogIn extends React.Component {
               value={businessName}
               onChange={this.handleChange}
               required
-            />
+            /></label>
             {/* <br /> */}
+            <label className="address">
+              <div></div>Business Email:
             <input
               className="regFormInput"
               type="email"
@@ -129,9 +138,11 @@ export default class LogIn extends React.Component {
               value={businessEmail}
               onChange={this.handleChange}
               required
-            />
+            /></label>
             {/* <br /> */}
             {/* Address <br /> */}
+            <label className="address">
+             <div></div> Address:
             <input
               className="regFormInput"
               type="text"
@@ -140,7 +151,8 @@ export default class LogIn extends React.Component {
               value={addressOne}
               onChange={this.handleChange}
               required
-            />
+            /></label>
+            <label></label>
             <input
               className="regFormInput"
               type="text"
@@ -160,6 +172,8 @@ export default class LogIn extends React.Component {
               required
             />
             {/* <br /> */}
+            <label className="address">
+              <div></div>Logo url:
             <input
               className="regFormInput"
               type="text"
@@ -167,10 +181,12 @@ export default class LogIn extends React.Component {
               name="logo"
               value={logo}
               onChange={this.handleChange}
-            />
+            /></label>
           </div>
           {/* <br /> */}
           <div>
+            <label className="address">
+              <div>Description:</div>
             <textarea
               className="regFormTextArea"
               rows="4"
@@ -179,7 +195,7 @@ export default class LogIn extends React.Component {
               value={description}
               onChange={this.handleChange}
               required
-            />
+            /></label>
           </div>
           {/* <br /> */}
           <div>

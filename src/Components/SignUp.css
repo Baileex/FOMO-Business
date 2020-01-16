@@ -25,20 +25,23 @@
 }
 
 .regFormInput {
-  color: white;
   border-radius: 20px;
   height: 20px;
   padding: 1%;
-  margin: 5%;
-  margin-bottom: 1%;
+  margin: 2%;
+  margin-bottom: 0.5%;
   max-width: 50%;
+  border: 0;
+  width: 30%;
   /* background-color: orange; */
 }
 
 .regFormTextArea {
   border-radius: 20px;
   padding: 5%;
-  margin: 5%;
+  margin: 3%;
+  border: 0;
+  width: 50%;
   /* background-color: orange; */
 }
 
