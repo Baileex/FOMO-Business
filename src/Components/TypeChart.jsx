@@ -31,17 +31,22 @@ class TimeChart extends Component {
       return { y: test[type]};
     });
     return (
-      <div className="age-chart">
+      <div className="type-chart">
+        <h2 className="type-subtitle">Popular Event Type Breakdown of users in your location</h2>
         <VictoryLegend
           className="legend"
-          x={1}
-          y={200}
+          x={10}
+          y={100}
           width={650}
           title="Event Types"
           centerTitle
           orientation="horizontal"
           gutter={10}
-          style={{ border: { stroke: "black" }, title: { fontSize: 12 }, fontSize: 12 }}
+          style={{
+            border: { stroke: "black" },
+            title: { fontSize: 12 },
+            fontSize: 12
+          }}
           data={[
             { name: "Sport", symbol: { fill: "navy" } },
             { name: "Live", symbol: { fill: "green" } },

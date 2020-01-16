@@ -64,7 +64,9 @@ class TimeChart extends Component {
         return { key: hour[0], b: test[hour[1]] };
       });
     return (
-      <div className="age-chart">
+      <div className="time-chart">
+        <h2 className="time-subtitle">Most Popular times of event in your location</h2>
+        <h4>(Click the zoom bar below to start )</h4>
         <VictoryChart
           width={600}
           height={470}

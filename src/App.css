@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: ". ." ". .";
+  grid-template-areas: "age gender" "time type";
   align-items: center;
 }
 
@@ -68,6 +68,24 @@ body {
   margin-left: 20%;
 }
 
+.dash-title{
+ position: relative;
+  margin-top: 5%;
+  font-size: 300%;
+  text-align: center;
+  margin-left: 20%; 
+}
+
+.gender-subtitle {
+  margin-top: 13.2%;
+  margin-bottom: -5%  
+}
+
+.time-subtitle {
+  margin-top: -24%;
+  margin-bottom: 5%  
+}
+
 .events-title {
   position: relative;
   margin-top: 5%;
@@ -105,10 +123,14 @@ body {
 
 .Link:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 5px solid rgb(255, 241, 47);
+  border-bottom: 5px solid orange;
   transition: 0.2s ease-in-out;
 
   font-size: 110%;
+}
+
+.Link {
+  margin-left: 15%;
 }
 
 .container {
@@ -262,7 +284,8 @@ br {
 }
 
 .legend {
-  position: relative;
+  position: fixed;
+  margin-top: -10%; 
 }
 
 .desInput{
@@ -358,7 +381,7 @@ select {
 text-align: center; 
 }
 .event-regButton {
-  background: rgb(8, 6, 102);
+  background: rgba(196, 73, 7, 1);
   border-radius: 20px;
   border: none;
   color: white;
@@ -367,6 +390,7 @@ text-align: center;
   margin-left: 25%;
   text-transform: uppercase;
   font-size: 70%;
+  opacity: 80%;
 }
 
 .card {
@@ -381,16 +405,19 @@ text-align: center;
          margin-top: 1%;
          width: 100%;
          margin-left: 56%;
+         padding: 0%;
 }
 .events {
          margin-top: 10%;
          width: 100%;
          margin-left: -24%;
          grid-area: events;
+         text-align: left;
+         padding: 2%;
 }
 .events-form {
   visibility: visible;
-  background-color: rgba(176, 182, 189, 0.609);
+  background-color:rgba(180, 177, 177, 0.342) ;
   position: fixed; 
   border-radius: 20px;
   width: 50%;
@@ -402,20 +429,45 @@ text-align: center;
 }
 
 .age-chart {
-  background-color: white;
+  /* background-color: white;
   width: 80%;
-  margin-top: 100px;
-  margin-left: 100px; 
-  box-shadow: #282c34;
+  height: 90%;
+  margin-top: 0%;
+  margin-left: -40%;  */
+  grid-area: "age"
+}
+
+.type-chart {
+  /* background-color: white;
+  width: 100%;
+  margin-top: -80%;
+  margin-left: 50%; 
+  margin-right: 40%; 
+  box-shadow: #282c34; */
+  grid-area: type;
 }
 
 .time-chart {
- background-color: white;
-  width: 50%;
-  height: 90%;
-  margin-top: -100%;
-  margin-left: 800px; 
+  /* background-color: white;
+  width: 100%;
+  margin-top: -20%;
+  margin-left: -10%;  
+  box-shadow: #282c34; */
+  grid-area: time;
 }
+
+.gender-chart {
+  /* background-color: white;
+  width: 110%;
+  height: 90%;
+  margin-top: 0%;
+  margin-left: 40%; 
+  margin-right: 20%; 
+  box-shadow: #282c34; */
+  grid-area: gender;
+}
+
+
  button {
   background-color: blue;
   border: none;
@@ -435,18 +487,19 @@ text-align: center;
   padding: 5px 22px;
   text-align: center;
   margin-top: 10px;
-  margin-left: 500px;
+  margin-left: 430px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   width: 50%;
   height: 50%;
-  background: rgb(8, 6, 102);
+  background: rgba(196, 73, 7, 1);
   border-radius: 20px;
   border: none;
   color: white;
   text-transform: uppercase;
   font-size: 70%;
+  opacity: 80%;
 }
 
 .labels {
@@ -463,4 +516,14 @@ text-align: center;
   text-align: center;
   margin-left: 1%;
   color: black;
+}
+
+.type-subtitle {
+  /* margin-top: 40%;
+  margin-bottom: -28%  */
+}
+
+.age-subtitle {
+  margin-top: 8%;
+  margin-bottom: 0% 
 }

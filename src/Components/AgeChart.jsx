@@ -4,7 +4,7 @@ import { VictorySharedEvents, VictoryBar, VictoryLabel, VictoryPie } from "victo
 import axios from "axios"
 
 const createTally = data => {
-  let ageTally = {"0-15": 0, "16-25":0, "26-39":0, "40-65":0, "66+":0};
+  let ageTally = {"0-15": 0, "16-25":0, "26-39":0, "40-65":0};
   data.forEach(function(set) {
     if (ageTally[set.age]) {
       ageTally[set.age]++;
@@ -28,7 +28,11 @@ class Charts extends Component {
     })
     return (
       <div className="age-chart">
-        <svg viewBox="-50 -40 400 400">
+        <h2 className="age-subtitle">
+          Age demographic of users in your location
+        </h2>
+        <h4>(Please click the bars to see pie chart)</h4>
+        <svg viewBox="-50 -40 500 400">
           <VictorySharedEvents
             events={[
               {
@@ -76,12 +80,17 @@ class Charts extends Component {
                 labelComponent={<VictoryLabel y={290} />}
               />
             </g>
-            <g transform={"translate(-30, -105)"}>
+            <g transform={"translate(-40, -100)"}>
               <VictoryPie
                 name="pie"
-                width={250}
+                width={280}
+                labelPosition="endAngle"
                 standalone={false}
-                style={{ labels: { fontSize: 15, padding: 8 } }}
+                style={{
+                  labels: {
+                    fontSize: 0
+                  }
+                }}
                 data={dataSet}
               />
             </g>

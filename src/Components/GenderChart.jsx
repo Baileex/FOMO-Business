@@ -25,12 +25,12 @@ class GenderChart extends Component {
     const {data} = this.props
     const test = createTally(data)
     return (
-      <div className="age-chart">
+      <div className="gender-chart">
+        <h2 className="gender-subtitle">Gender Breakdown of users in your location</h2>
         <VictoryChart
        theme={VictoryTheme.material}
       domainPadding={{ x: 15 }}
 >
-        <h3>A</h3>
         <VictoryBar
           style={{
             data: { fill: "#c43a31" }
