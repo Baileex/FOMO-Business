@@ -89,7 +89,7 @@ class TimeChart extends Component {
         <VictoryChart
           padding={{ top: 0, left: 50, right: 50, bottom: 30 }}
           width={600}
-          height={100}
+          height={105}
           scale={{ x: "time" }}
           containerComponent={
             <VictoryBrushContainer
