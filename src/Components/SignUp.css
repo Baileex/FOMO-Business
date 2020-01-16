@@ -1,0 +1,62 @@
+.signUpContainer {
+  grid-area: "signup";
+  margin: 0%;
+  margin-left: 45px;
+  width: 700px;
+  height: 700px;
+  background-color: rgba(180, 177, 177, 0.342);
+  border-radius: 20px;
+  /* background-color: orange; */
+}
+
+.signUpTitle {
+  padding-top: 20px;
+  align-self: center;
+  /* background-color: orange; */
+}
+
+.regForm {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; */
+  /* grid-template-areas: "input_1, input_2" ". ." ". ." ". ."; */
+  /* align-self: center; */
+  /* background-color: orange; */
+}
+
+.regFormInput {
+  color: white;
+  border-radius: 20px;
+  height: 20px;
+  padding: 1%;
+  margin: 5%;
+  margin-bottom: 1%;
+  max-width: 50%;
+  /* background-color: orange; */
+}
+
+.regFormTextArea {
+  border-radius: 20px;
+  padding: 5%;
+  margin: 5%;
+  /* background-color: orange; */
+}
+
+.regFormButton {
+  text-align: center;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-bottom: 5%;
+  text-decoration: none;
+  font-size: 16px;
+  width: 50%;
+  height: 30px;
+  background: rgba(196, 73, 7, 1);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 70%;
+  opacity: 80%;
+  /* background-color: orange; */
+}

@@ -1,0 +1,19 @@
+.LogoContainer {
+  margin-top: 90px;
+  margin-left: 55%;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+
+.HomepageFormContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "login, signup";
+  margin-left: 25%;
+  margin-top: 40px;
+  justify-content: center;
+  width: 900px;
+}
