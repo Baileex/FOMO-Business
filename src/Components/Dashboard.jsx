@@ -33,7 +33,7 @@ class Dashboard extends Component {
     return (
       <div>
         <h1 className="title">DASHBOARD</h1>
-        <p className="title" >The data below is relevant to your location:  </p>
+        <p >The data below is relevant to your location:  </p>
         <div className="grid-dashboard">
           <AgeChart data={data} />
           <GenderChart data={data} />

@@ -28,10 +28,10 @@ class App extends React.Component {
     });
   }
 
-  getUser = (accessToken, username, businessName, id) => {
+  getUser = (accessToken, username, businessName, business_id) => {
     this.setState({
       currentUser: username,
-      userId: id,
+      userId: business_id,
       businessName,
       accessToken
     });

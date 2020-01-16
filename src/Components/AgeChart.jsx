@@ -28,7 +28,7 @@ class Charts extends Component {
     })
     return (
       <div className="age-chart">
-        <svg viewBox="-50 -40 500 400">
+        <svg viewBox="-50 -40 400 400">
           <VictorySharedEvents
             events={[
               {

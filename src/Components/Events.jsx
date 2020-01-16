@@ -34,13 +34,14 @@ class Events extends Component {
 
   fetchEvents = () => {
     const { userId } = this.props;
-    // if (userId !== null) {
+    console.log(userId)
+    if (userId !== null) {
     return axios
-      .get("https://fomo-api.herokuapp.com/events/1")
+      .get(`https://fomo-api.herokuapp.com/events/${userId}`)
       .then(({ data }) => {
         this.setState({ events: data.events, isLoading: false });
       });
-    // }
+    }
   };
 
   removeEvent = id => {
@@ -67,9 +68,11 @@ class Events extends Component {
     address,
     url
   ) => {
+    const { userId } = this.props;
     if (url.length > 0) {
+      console.log('here')
       return axios
-        .post("https://fomo-api.herokuapp.com/businesses/event/1", {
+        .post(`https://fomo-api.herokuapp.com/businesses/event/${userId}`, {
           event_name: event_name,
           name: name,
           address: address,
@@ -91,7 +94,7 @@ class Events extends Component {
         });
     } else {
       return axios
-        .post("https://fomo-api.herokuapp.com/businesses/event/1", {
+        .post(`https://fomo-api.herokuapp.com/businesses/event/${userId}`, {
           event_name: event_name,
           name: name,
           address: address,
@@ -119,9 +122,8 @@ class Events extends Component {
       this.getLocations();
     }
     return (
-      <div >
-        <h1 className="title">MY EVENTS</h1>
-        <ul>
+      <div className="container">
+        <ul className="events">
           {events.map(event => {
             return (
               <div className="card">

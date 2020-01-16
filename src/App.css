@@ -68,6 +68,14 @@ body {
   margin-left: 20%;
 }
 
+.events-title {
+  position: relative;
+  margin-top: 5%;
+  font-size: 300%;
+  text-align: center;
+  margin-left: 100%;
+}
+
 .NavLinks {
   display: inline-block;
   overflow: hidden;
@@ -104,12 +112,10 @@ body {
 }
 
 .container {
-  display: inline-block;
-  width: 100%;
-  height: 200%;
-  position: relative;
-  overflow: scroll;
-  margin-left: 10%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "form, events";
 }
 
 .logInContainer {
@@ -160,11 +166,9 @@ visibility: hidden;
 .dateInput {
   border: none;
   background: white;
-  text-align: center;
   border-radius: 20px;
   margin-top: 0%;
   margin-left: 1%;
-  font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -205,6 +209,46 @@ visibility: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.cityInput {
+    border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 1%;
+  margin-left: 18%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+.citybInput {
+    border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 1%;
+  margin-left: 18%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+.citycInput {
+    border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 1%;
+  margin-left: 18%;
+  margin-bottom: 2%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
 br {
   display: block; /* makes it have a width */
   content: ""; /* clears default height */
@@ -217,14 +261,18 @@ br {
   margin-top: -40px;
 }
 
+.legend {
+  position: relative;
+}
+
 .desInput{
   border: none;
   background: white;
   text-align: center;
   border-radius: 20px;
   margin-top: 1%;
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 17%;
+  width: 80%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -236,10 +284,10 @@ br {
   text-align: center;
   border-radius: 20px;
   margin-top: 1%;
-  margin-left: 5%;
+  margin-left: 6%;
   width: 40%;
   font-weight: 100;
-  font-size: 100%;
+  font-size: 90%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -273,16 +321,41 @@ br {
   margin-top: -100%; 
 }
 
+.address {
+  font-weight: bold;
+  font-size: 110%;
+  margin-left: 1%;
+}
+
 .addInput{
   border: none;
   background: white;
   text-align: center;
   border-radius: 20px;
-  margin-top: 5%;
-  margin-left: 15%;
+  margin-top: 0%;
+  margin-left: 18%;
   font-weight: 100;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+.typeInput {
+  border: none;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  margin-left: 18%;
+  font-weight: 100;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+}
+
+select {
+text-align: center; 
 }
 .event-regButton {
   background: rgb(8, 6, 102);
@@ -291,7 +364,7 @@ br {
   color: white;
   margin-top: 0%;
   margin-bottom: 10%;
-  margin-left: 0%;
+  margin-left: 25%;
   text-transform: uppercase;
   font-size: 70%;
 }
@@ -304,11 +377,16 @@ br {
          display: grid;
          grid-template-columns: 200px 200px 300px 100px;
          grid-auto-rows: 50px;
-         position: relative;
-         margin-top: 15rem;
-         margin: 1.5rem;
-         width: 50%;
-         margin-left: 55%    
+         position: flex;
+         margin-top: 1%;
+         width: 100%;
+         margin-left: 56%;
+}
+.events {
+         margin-top: 10%;
+         width: 100%;
+         margin-left: -24%;
+         grid-area: events;
 }
 .events-form {
   visibility: visible;
@@ -316,10 +394,11 @@ br {
   position: fixed; 
   border-radius: 20px;
   width: 50%;
-  height: 80%;
-  margin-top: 0%;
-  margin-left: 4%;  
+  height: 85%;
+  margin-top: 5%;
+  margin-left: 2%;  
   text-align: left;
+  grid-area: form;
 }
 
 .age-chart {
@@ -370,8 +449,10 @@ br {
   font-size: 70%;
 }
 
-label {
-  margin-left: 3%;
+.labels {
+  margin-top: 20%;
+  width: 0%;
+  position: relative;
 }
 
 .postevent-title {
