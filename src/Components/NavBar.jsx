@@ -21,7 +21,7 @@ export default function NavBar({ logOut, access }) {
           {access && <li className="Link">BUSINESS</li>}
         </Link>
         {access && (
-          <li
+          <li 
             className="Link"
             onClick={() => {
               logOut();

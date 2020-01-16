@@ -32,8 +32,7 @@ class Dashboard extends Component {
     const { data } = this.state;
     return (
       <div>
-        <h1 className="title">DASHBOARD</h1>
-        <p >The data below is relevant to your location:  </p>
+        <h1 className="dash-title">DASHBOARD</h1>
         <div className="grid-dashboard">
           <AgeChart data={data} />
           <GenderChart data={data} />

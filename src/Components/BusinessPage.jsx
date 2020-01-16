@@ -67,28 +67,40 @@ export default class BusinessPage extends React.Component {
       err
     } = this.state;
     return (
-      <div>
+      <div className="events-form">
+        <h1 className="postevent-title">CHANGE DETAILS</h1>
         <form onSubmit={this.handleUsernameChange}>
-          <input
-            type="text"
-            placeholder="new username"
-            name="username"
-            value={username}
-            onChange={this.handleChange}
-            required
-          />
-          <button type="submit">Change Username</button>
+          <label className="address">
+            Change Username:
+            <input
+              type="text"
+              placeholder="new username"
+              name="username"
+              value={username}
+              onChange={this.handleChange}
+              required
+              className="nameInput"
+            />
+          </label>
+          <button type="submit" className="event-regButton">
+            Change Username
+          </button>
         </form>
         <br />
+
         <form onSubmit={this.handlePasswordChange}>
-          <input
-            type="password"
-            name="passwordOne"
-            placeholder="new password"
-            value={passwordOne}
-            onChange={this.handleChange}
-            required
-          />
+          <label className="address">
+            Change Password:
+            <input
+              type="password"
+              name="passwordOne"
+              placeholder="new password"
+              value={passwordOne}
+              onChange={this.handleChange}
+              required
+              className="addInput"
+            />
+          </label>
           <input
             type="password"
             name="passwordTwo"
@@ -96,27 +108,35 @@ export default class BusinessPage extends React.Component {
             value={passwordTwo}
             onChange={this.handleChange}
             required
+            className="addInput"
           />
           {err && <ErrorDisplay error={err} />}
-          <button type="submit">Change Password</button>
+          <button type="submit" className="event-regButton">
+            Change Password
+          </button>
         </form>
         <br />
         <form onSubmit={this.handleBusinessChange}>
-          <input
-            value={businessName}
-            onChange={this.handleChange}
-            type="text"
-            name="businessName"
-            placeholder="Business name"
-            required
-          />
+          <label className="address">
+            Change Business Details:
+            <input
+              value={businessName}
+              onChange={this.handleChange}
+              type="text"
+              name="businessName"
+              placeholder="Business Name"
+              required
+              className="baddInput"
+            />
+          </label>
           <input
             value={email}
             onChange={this.handleChange}
             type="text"
             name="email"
-            placeholder="Business email"
+            placeholder="Business Email"
             required
+            className="bcityInput"
           />
           <input
             value={address}
@@ -125,6 +145,7 @@ export default class BusinessPage extends React.Component {
             name="address"
             placeholder="Address"
             required
+            className="bcitybInput"
           />
           <input
             value={townCity}
@@ -133,25 +154,31 @@ export default class BusinessPage extends React.Component {
             name="townCity"
             placeholder="Town/City"
             required
+            className="bcitycInput"
           />
           <input
             value={postCode}
             onChange={this.handleChange}
             type="text"
             name="postCode"
-            placeholder="postcode"
+            placeholder="Postcode"
             required
+            className="btypeInput"
           />
           <textarea
             value={description}
             onChange={this.handleChange}
             type="text"
-            row="4"
+            row="10"
+            column="4"
             name="description"
             placeholder="Description"
             required
+            className="busInput"
           />
-          <button type="submit">Update Business</button>
+          <button type="submit" className="details-regButton">
+            Update Business
+          </button>
         </form>
       </div>
     );

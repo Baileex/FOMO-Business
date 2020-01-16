@@ -128,16 +128,16 @@ class Events extends Component {
             return (
               <div className="card">
                 <h3>Name: {event.event_name}</h3>
-                <h4>Address: {event.venue.address}</h4>
+                <h3>Address: {event.venue.address}</h3>
                 <h4>Min. age: {event.minage}</h4>
-                
+
                 <h4>Description: {event.description}</h4>
-                
+
                 <h4>Event Type: {event.event_type}</h4>
                 <h4>Date: {event.date}</h4>
                 <h4>Opening Time: {event.openingtimes.doorsopen}</h4>
                 <h4>Location: {event.venue.name}</h4>
-                <h4>Cost: {event.entryprice}</h4>
+                <h4>Cost: £{event.entryprice}</h4>
 
                 <h4>Postcode: {event.venue.postcode}</h4>
                 <h4>Finishing Time: {event.openingtimes.doorsclose}</h4>
