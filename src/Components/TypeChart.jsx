@@ -33,7 +33,7 @@ class TimeChart extends Component {
     return (
       <div className="age-chart">
         <VictoryPie
-          colorScale={["tomato", "blue", "gold", "cyan", "navy"]}
+          colorScale={["green", "blue", "gold", "cyan", "navy"]}
           data={chartData}
         />
       </div>
