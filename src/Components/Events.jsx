@@ -14,7 +14,7 @@ class Events extends Component {
 
   componentDidUpdate = (prevProps, prevState) => {
     if (prevState.events.length !== this.state.events.length) {
-      this.fetchEvents()
+      this.fetchEvents();
     }
   };
 
@@ -88,7 +88,7 @@ class Events extends Component {
           this.setState(currentState => {
             return { events: [...currentState.events, data] };
           });
-        });  
+        });
     } else {
       return axios
         .post("https://fomo-api.herokuapp.com/businesses/event/1", {
@@ -105,13 +105,13 @@ class Events extends Component {
           minage: minage,
           entryprice: entryprice
         })
-        .then(({data}) => {
-        this.setState(currentState => {
-          return { events: [...currentState.events, data] };
+        .then(({ data }) => {
+          this.setState(currentState => {
+            return { events: [...currentState.events, data] };
+          });
         });
-        })  
     }
-  }
+  };
 
   render() {
     const { events } = this.state;
@@ -119,24 +119,31 @@ class Events extends Component {
       this.getLocations();
     }
     return (
-      <div>
-        <h1>My Events</h1>
+      <div >
+        <h1 className="title">MY EVENTS</h1>
         <ul>
           {events.map(event => {
             return (
               <div className="card">
-                <h3>Name:{event.event_name}</h3>
-                <h4>Location:{event.venue.name}</h4>
-                <h4>Address:{event.venue.address}</h4>
-                <h4>Postcode:{event.venue.postcode}</h4>
-                <h4>Description:{event.description}</h4>
-                <h4>Event Type:{event.event_type}</h4>
-                <h4>Date:{event.date}</h4>
-                <h4>Opening Time:{event.openingtimes.doorsopen}</h4>
-                <h4>Finishing Time:{event.openingtimes.doorsclose}</h4>
-                <h4>Min. age:{event.minage}</h4>
-                <h4>Cost:{event.eventprice}</h4>
-                <button onClick={() => this.removeEvent(event.id)}>
+                <h3>Name: {event.event_name}</h3>
+                <h4>Address: {event.venue.address}</h4>
+                <h4>Min. age: {event.minage}</h4>
+                
+                <h4>Description: {event.description}</h4>
+                
+                <h4>Event Type: {event.event_type}</h4>
+                <h4>Date: {event.date}</h4>
+                <h4>Opening Time: {event.openingtimes.doorsopen}</h4>
+                <h4>Location: {event.venue.name}</h4>
+                <h4>Cost: {event.entryprice}</h4>
+
+                <h4>Postcode: {event.venue.postcode}</h4>
+                <h4>Finishing Time: {event.openingtimes.doorsclose}</h4>
+                <img className="event-img" src={event.url}></img>
+                <button
+                  className="event-delButton"
+                  onClick={() => this.removeEvent(event.id)}
+                >
                   Delete
                 </button>
               </div>

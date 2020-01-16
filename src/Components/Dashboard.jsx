@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import AgeChart from './AgeChart';
-import GenderChart from "./GenderChart"
-import TimeChart from "./TimeChart"
+import React, { Component } from "react";
+import AgeChart from "./AgeChart";
+import GenderChart from "./GenderChart";
+import TimeChart from "./TimeChart";
 import TypeChart from "./TypeChart";
 import axios from "axios";
 
@@ -32,10 +32,14 @@ class Dashboard extends Component {
     const { data } = this.state;
     return (
       <div>
-        <AgeChart data={data} />
-        <GenderChart data={data} />
-        <TimeChart data={data} />
-        <TypeChart data={data} />
+        <h1 className="title">DASHBOARD</h1>
+        <p className="title" >The data below is relevant to your location:  </p>
+        <div className="grid-dashboard">
+          <AgeChart data={data} />
+          <GenderChart data={data} />
+          <TimeChart data={data} />
+          <TypeChart data={data} />
+        </div>
       </div>
     );
   }

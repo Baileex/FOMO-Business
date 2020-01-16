@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-
 class EventForm extends React.Component {
   state = {
     event_name: "",
@@ -23,7 +22,7 @@ class EventForm extends React.Component {
     const { name } = event.target;
     if (name === "postcode") {
       let postcode = event.target.value.replace(/\s/g, "");
-      this.setState({postcode: postcode})
+      this.setState({ postcode: postcode });
     } else {
       this.setState({ [name]: event.target.value });
     }
@@ -47,44 +46,44 @@ class EventForm extends React.Component {
       address,
       url
     } = this.state;
-   postEvent(
-     event_name,
-     description,
-     event_type,
-     date,
-     doorsopen,
-     doorsclose,
-     minage,
-     entryprice,
-     cityname,
-     name,
-     postcode,
-     address,
-     url
-   )
-   this.setState({
-            event_name: "",
-            name: "",
-            address: "",
-            cityname: "",
-            postcode: "",
-            description: "",
-            event_type: "",
-            date: "",
-            doorsopen: "",
-            doorsclose: "",
-            minage: "",
-            entryprice: "",
-            url: ""
-  })
-} 
-
+    postEvent(
+      event_name,
+      description,
+      event_type,
+      date,
+      doorsopen,
+      doorsclose,
+      minage,
+      entryprice,
+      cityname,
+      name,
+      postcode,
+      address,
+      url
+    );
+    this.setState({
+      event_name: "",
+      name: "",
+      address: "",
+      cityname: "",
+      postcode: "",
+      description: "",
+      event_type: "",
+      date: "",
+      doorsopen: "",
+      doorsclose: "",
+      minage: "",
+      entryprice: "",
+      url: ""
+    });
+  };
 
   render() {
     return (
       <div className="events-form">
+        <h1 className="postevent-title">ADD AN EVENT</h1>
         <form onSubmit={this.handleSubmit}>
-          <label className="regFormTitle">
+          <label>
             Event Name:
             <input
               type="text"
@@ -93,20 +92,22 @@ class EventForm extends React.Component {
               value={this.state.event_name}
               onChange={this.handleChange}
               required
-              className="regInput"
+              className="nameInput"
             />
           </label>
-          Address: <br />
+          <br></br>
           <label>
+            Address:
             <input
               type="text"
               placeholder="Location Name"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
-              className="regInput"
+              className="addInput"
             />
           </label>
+          <br></br>
           <label>
             <input
               type="text"
@@ -115,9 +116,10 @@ class EventForm extends React.Component {
               value={this.state.address}
               onChange={this.handleChange}
               required
-              className="regInput"
+              className="cityInput"
             />
           </label>
+          <br className="br"></br>
           <label>
             <input
               type="text"
@@ -128,6 +130,7 @@ class EventForm extends React.Component {
               className="regInput"
             />
           </label>
+          <br className="br"></br>
           <label>
             <input
               type="text"
@@ -169,20 +172,22 @@ class EventForm extends React.Component {
               <option value="COMEDY">Comedy</option>
             </select>
           </label>
-          <br />
+          <br></br>
+
           <label>
             Description:
             <textarea
-              rows="6"
-              columns="12"
+              rows="10"
+              columns="22"
               placeholder="Description"
               name="description"
               value={this.state.description}
               onChange={this.handleChange}
               required
-              className="regInput"
+              className="desInput"
             />
           </label>
+          <br></br>
           <label>
             Add an image url:
             <input
@@ -206,9 +211,10 @@ class EventForm extends React.Component {
               value={this.state.date}
               onChange={this.handleChange}
               required
-              className="regInput"
+              className="dateInput"
             />
           </label>
+          <br></br>
           <label>
             Opening Time:
             <input
@@ -217,7 +223,7 @@ class EventForm extends React.Component {
               value={this.state.doorsopen}
               onChange={this.handleChange}
               required
-              className="regInput"
+              className="timeInput"
             />
           </label>
           <label>
@@ -233,29 +239,27 @@ class EventForm extends React.Component {
           </label>
           <label>
             Event Price:
-            <div className="cost-regInput">
-              <input
-                type="number"
-                min="0"
-                max="100"
-                name="entryprice"
-                value={this.state.entryprice}
-                onChange={this.handleChange}
-              />
-            </div>
+            <input
+              type="number"
+              min="0"
+              max="500"
+              name="entryprice"
+              value={this.state.entryprice}
+              onChange={this.handleChange}
+              className="priceInput"
+            />
           </label>
           <label>
             Min. Age:
-            <div className="cost-regInput">
-              <input
-                type="number"
-                min="0"
-                max="100"
-                name="minage"
-                value={this.state.minage}
-                onChange={this.handleChange}
-              />
-            </div>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              name="minage"
+              value={this.state.minage}
+              onChange={this.handleChange}
+              className="ageInput"
+            />
           </label>
           <button className="event-regButton">Add</button>
         </form>
