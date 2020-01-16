@@ -79,7 +79,7 @@ class TimeChart extends Component {
         >
           <VictoryLine
             style={{
-              data: { stroke: "tomato" }
+              data: { stroke: "blue" }
             }}
             data={dataSet}
             x="a"
