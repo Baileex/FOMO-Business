@@ -85,7 +85,8 @@ class Events extends Component {
           doorsopen: doorsopen,
           minage: minage,
           entryprice: entryprice,
-          url: url
+          url: url,
+          business_id: userId
         })
         .then(({ data }) => {
           this.setState(currentState => {
@@ -106,7 +107,8 @@ class Events extends Component {
           doorsclose: doorsclose,
           doorsopen: doorsopen,
           minage: minage,
-          entryprice: entryprice
+          entryprice: entryprice,
+          business_id: userId
         })
         .then(({ data }) => {
           this.setState(currentState => {
