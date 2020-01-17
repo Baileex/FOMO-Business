@@ -21,10 +21,10 @@ class Events extends Component {
   getLocations = () => {
     const { events } = this.state;
     events.map(event => {
-      axios
+    return axios
         .get(`https://api.postcodes.io/postcodes/${event.venue.postcode}`)
         .then(({ data }) => {
-          axios.patch(
+          return axios.patch(
             `https://fomo-api.herokuapp.com/events/${event.event_name}/location`,
             { longitude: data.result.longitude, latitude: data.result.latitude }
           );
