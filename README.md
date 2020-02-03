@@ -39,3 +39,5 @@ To explore the site, please feel free to use the following log in:
 username: Test
 password: Test
 ```
+
+To watch the video demo: https://drive.google.com/file/d/1d536UXfvrdCxHwrsDgbs7MsFnN9wMN82/view?usp=sharing
