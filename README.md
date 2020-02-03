@@ -19,7 +19,7 @@ The back end repository for this project is available [here](https://github.com/
 
 ## How to run this project locally
 
-### Step 1 - Fork and Clone
+### Fork and Clone
 Pre-requisites: node.js 12.13.0
 
 ```
