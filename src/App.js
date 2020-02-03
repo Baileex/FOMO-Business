@@ -48,6 +48,7 @@ class App extends React.Component {
 
   render() {
     const { businessName, accessToken, err , userId} = this.state;
+    console.log(userId)
     return (
       <div className="App">
         <NavBar access={accessToken} logOut={this.logOut} />
@@ -67,7 +68,6 @@ class App extends React.Component {
             path={accessToken ? "/business_account" : "/"}
           />
           <Dashboard path={accessToken ? "/dashboard" : "/"} />
-          {/* <User path="/User" />  */}
         </Router>
       </div>
     );
